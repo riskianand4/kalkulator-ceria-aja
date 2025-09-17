@@ -13,7 +13,8 @@ import {
   Bell,
   Download,
   Settings as SettingsIcon,
-  Package
+  Package,
+  ScrollText
 } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
@@ -25,43 +26,49 @@ const moreMenuItems = [
     title: "Inventory",
     url: "/inventory",
     icon: Package,
-    roles: ['user', 'admin', 'superadmin']
+    roles: ['user', 'superadmin']
   },
   {
     title: "Stock Movement",
     url: "/stock-movement",
     icon: TrendingUp,
-    roles: ['admin', 'superadmin']
+    roles: ['superadmin']
   },
   {
     title: "Stock Reports", 
     url: "/stock-report",
     icon: FileText,
-    roles: ['admin', 'superadmin']
+    roles: ['superadmin']
   },
   {
     title: "Generate Report",
     url: "/stock-report?generate=true", 
     icon: Download,
-    roles: ['user', 'admin', 'superadmin']
+    roles: ['user', 'superadmin']
   },
   {
     title: "Alerts",
     url: "/alerts", 
     icon: Bell,
-    roles: ['user', 'admin', 'superadmin']
+    roles: ['user', 'superadmin']
   },
   {
     title: "Users",
     url: "/users", 
     icon: Users,
-    roles: ['admin', 'superadmin']
+    roles: ['superadmin']
   },
   {
     title: "AI Studio",
     url: "/ai-studio",
     icon: Brain,
-    roles: ['admin', 'superadmin']
+    roles: ['superadmin']
+  },
+  {
+    title: "Log Audit",
+    url: "/audit-log",
+    icon: ScrollText,
+    roles: ['superadmin']
   },
   {
     title: "API Management",
@@ -73,7 +80,7 @@ const moreMenuItems = [
     title: "Settings",
     url: "/settings",
     icon: SettingsIcon,
-    roles: ['user', 'admin', 'superadmin']
+    roles: ['user', 'superadmin']
   }
 ];
 
@@ -93,8 +100,6 @@ export function MobileMoreMenu({ isOpen, onClose }: MobileMoreMenuProps) {
     switch (role) {
       case 'superadmin':
         return 'bg-destructive';
-      case 'admin':
-        return 'bg-warning';
       default:
         return 'bg-success';
     }
@@ -104,8 +109,6 @@ export function MobileMoreMenu({ isOpen, onClose }: MobileMoreMenuProps) {
     switch (role) {
       case 'superadmin':
         return 'Super Admin';
-      case 'admin':
-        return 'Admin';
       default:
         return 'User';
     }
