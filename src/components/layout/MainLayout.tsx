@@ -148,7 +148,7 @@ const MainLayout = memo(function MainLayout({
         <AppSidebar />
         
         <div className="flex-1 flex flex-col">
-          <motion.header className="h-12 sm:h-14 lg:h-[89px] border-b border-border/50 bg-card/50 backdrop-blur-xl flex items-center justify-between px-2 sm:px-4 lg:px-6" initial={{
+          <motion.header initial={{
           opacity: 0,
           y: -20
         }} animate={{
@@ -156,7 +156,7 @@ const MainLayout = memo(function MainLayout({
           y: 0
         }} transition={{
           duration: 0.3
-        }}>
+        }} className="h-12 sm:h-14 h-[89px] lg:h-[89px] border-b border-border/50 bg-card/50 backdrop-blur-xl flex items-center justify-between px-2 sm:px-4 lg:px-6">
             <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
               <SidebarTrigger className="lg:hidden p-1 sm:p-2" />
             </div>
@@ -171,12 +171,7 @@ const MainLayout = memo(function MainLayout({
               <NotificationCenter />
               <ThemeToggle />
               
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="text-muted-foreground h-8 w-8 sm:h-9 sm:w-9 p-1 sm:p-2"
-                onClick={() => window.open('/documentation', '_blank')}
-              >
+              <Button variant="ghost" size="sm" className="text-muted-foreground h-8 w-8 sm:h-9 sm:w-9 p-1 sm:p-2" onClick={() => window.open('/documentation', '_blank')}>
                 <BookOpen className="h-3 w-3 sm:h-4 sm:w-4" />
               </Button>
 
