@@ -153,11 +153,14 @@ export const searchUsers = async (query: string): Promise<User[]> => {
 
 // Get current user profile
 export const getCurrentUser = async (): Promise<User | null> => {
-  const response = await safeApiCall<User>(
+  const response = await safeApiCall<any>(
     () => apiClient.get('/api/users/profile'),
     'Failed to fetch current user'
   );
-  return response.success ? (response.data || null) : null;
+  if (response.success && response.data) {
+    return mapBackendUserToFrontend(response.data);
+  }
+  return null;
 };
 
 // Get user activity logs
