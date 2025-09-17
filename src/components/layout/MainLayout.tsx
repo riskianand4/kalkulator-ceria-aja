@@ -156,7 +156,7 @@ const MainLayout = memo(function MainLayout({
           y: 0
         }} transition={{
           duration: 0.3
-        }} className="h-12 sm:h-14 h-[89px] lg:h-[89px] border-b border-border/50 bg-card/50 backdrop-blur-xl flex items-center justify-between px-2 sm:px-4 lg:px-6">
+        }} className="h-12 sm:h-14  h-[89px] lg:h-[89px] border-b border-border/50 bg-card/50 backdrop-blur-xl flex items-center justify-between px-2 sm:px-4 lg:px-6">
             <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
               <SidebarTrigger className="lg:hidden p-1 sm:p-2" />
             </div>
