@@ -76,7 +76,7 @@ const QuickStatsGrid: React.FC<QuickStatsGridProps> = ({ metrics, loading }) => 
 
   if (loading) {
     return (
-      <div className={`grid grid-cols-1 ${isMobile ? 'gap-3' : 'md:grid-cols-2 lg:grid-cols-3 gap-4'}`}>
+      <div className={`grid ${isMobile ? 'grid-cols-2 gap-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'}`}>
         {[...Array(6)].map((_, index) => (
           <Card key={index} className="animate-pulse">
             <CardContent className={isMobile ? "p-3" : "p-4"}>
@@ -93,7 +93,7 @@ const QuickStatsGrid: React.FC<QuickStatsGridProps> = ({ metrics, loading }) => 
   }
 
   return (
-    <div className={`grid grid-cols-1 ${isMobile ? 'gap-3' : 'md:grid-cols-2 lg:grid-cols-3 gap-4'}`}>
+    <div className={`grid ${isMobile ? 'grid-cols-2 gap-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'}`}>
       {metrics.map((metric, index) => {
         const IconComponent = getIconComponent(metric.icon);
         const statusColorClass = getStatusColor(metric.status);
