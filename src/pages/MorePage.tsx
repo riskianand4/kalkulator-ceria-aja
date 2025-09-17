@@ -24,7 +24,8 @@ import {
   Zap,
   ChevronRight,
   User,
-  Key
+  Key,
+  ScrollText
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -115,6 +116,13 @@ const MorePage = () => {
           description: "Monitoring keamanan sistem",
           icon: Shield,
           path: "/security",
+          roles: ['superadmin']
+        },
+        {
+          title: "Log Audit",
+          description: "Pantau aktivitas dan riwayat sistem",
+          icon: ScrollText,
+          path: "/audit-log",
           roles: ['superadmin']
         },
         {
