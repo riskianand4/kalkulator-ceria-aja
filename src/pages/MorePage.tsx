@@ -45,14 +45,14 @@ const MorePage = () => {
           description: "Generate laporan inventori lengkap",
           icon: FileText,
           path: "/stock-report",
-          roles: ['admin', 'superadmin']
+          roles: ['superadmin']
         },
         {
           title: "Buat Laporan",
           description: "Buat laporan custom dengan cepat",
           icon: BarChart2,
           path: "/stock-report?generate=true",
-          roles: ['user', 'admin', 'superadmin']
+          roles: ['user', 'superadmin']
         }
       ]
     },
@@ -64,14 +64,14 @@ const MorePage = () => {
           description: "Pantau pergerakan stok real-time",
           icon: TrendingUp,
           path: "/stock-movement",
-          roles: ['admin', 'superadmin']
+          roles: ['superadmin']
         },
         {
           title: "Pengguna",
           description: "Kelola pengguna sistem",
           icon: Users,
           path: "/users",
-          roles: ['admin', 'superadmin']
+          roles: ['superadmin']
         }
       ]
     },
@@ -83,21 +83,21 @@ const MorePage = () => {
           description: "Monitor peringatan dan notifikasi sistem",
           icon: Bell,
           path: "/alerts",
-          roles: ['user', 'admin', 'superadmin']
+          roles: ['user', 'superadmin']
         },
         {
           title: "Studio AI",
           description: "AI assistant dan otomasi cerdas",
           icon: Brain,
           path: "/ai-studio",
-          roles: ['admin', 'superadmin']
+          roles: ['superadmin']
         },
         {
           title: "Pengaturan",
           description: "Pengaturan sistem dan konfigurasi",
           icon: Settings,
           path: "/settings",
-          roles: ['user', 'admin', 'superadmin']
+          roles: ['user', 'superadmin']
         }
       ]
     },
