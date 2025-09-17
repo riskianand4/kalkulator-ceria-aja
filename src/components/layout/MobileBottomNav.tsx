@@ -38,18 +38,18 @@ export function MobileBottomNav() {
   }} transition={{
     duration: 0.3
   }}>
-      <div className="flex items-center justify-around px-4 py-1 pb-safe mobile-safe-bottom">
+      <div className="flex items-center justify-around px-2 py-0.5 pb-safe mobile-safe-bottom">
         {filteredItems.map(item => {
         const Icon = item.icon;
         const isActive = currentPath === item.url || item.url === "/" && currentPath === "/" || item.title === "More" && currentPath === "/more";
-        return <NavLink key={item.title} to={item.url} className="flex flex-col items-center justify-center min-w-0 flex-1 px-2">
-              <motion.div className={`flex flex-col items-center justify-center gap-1 p-2 transition-colors duration-200 ${isActive ? 'text-primary' : 'text-muted-foreground'}`} whileTap={{
+        return <NavLink key={item.title} to={item.url} className="flex flex-col items-center justify-center min-w-0 flex-1 px-1">
+              <motion.div className={`flex flex-col items-center justify-center gap-0.5 p-1 transition-colors duration-200 ${isActive ? 'text-primary' : 'text-muted-foreground'}`} whileTap={{
             scale: 0.95
           }}>
-                <div className={`p-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-primary/15 shadow-lg' : 'hover:bg-muted/50'}`}>
-                  <Icon className="w-5 h-5" />
+                <div className={`p-2 rounded-lg transition-all duration-200 ${isActive ? 'bg-primary/15 shadow-lg' : 'hover:bg-muted/50'}`}>
+                  <Icon className="w-4 h-4" />
                 </div>
-                <span className="text-xs font-medium truncate max-w-full leading-tight">
+                <span className="text-[10px] font-medium truncate max-w-full leading-tight">
                   {item.title}
                 </span>
                 {isActive && <motion.div className="w-1.5 h-1.5 bg-primary rounded-full mt-0.5" layoutId="mobileActiveIndicator" initial={{
