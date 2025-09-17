@@ -185,7 +185,7 @@ const SystemOverviewPanel: React.FC<SystemOverviewPanelProps> = ({
         </CardHeader>
         <CardContent className={isMobile ? "p-3" : ""}>
           <div className={`${isMobile ? 'space-y-2' : 'space-y-3'}`}>
-            {activities.length > 0 ? activities.map((activity, index) => (
+            {activities.length > 0 ? activities.slice(0, 3).map((activity, index) => (
               <div 
                 key={index} 
                 className={`flex items-start ${isMobile ? 'gap-2 p-2' : 'gap-3 p-3'} rounded-lg bg-muted/50 border hover:bg-muted/70 transition-colors`}
