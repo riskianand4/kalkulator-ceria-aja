@@ -27,7 +27,7 @@ const ProductCard = ({
   const {
     user
   } = useApp();
-  const isAdmin = user?.role === 'admin' || user?.role === 'superadmin';
+  const isAdmin = user?.role === 'superadmin';
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'in_stock':

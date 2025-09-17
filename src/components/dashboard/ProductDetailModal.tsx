@@ -51,7 +51,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
     return null;
   }
 
-  const canEdit = user?.role === 'admin' || user?.role === 'superadmin';
+  const canEdit = user?.role === 'superadmin';
 
   const getStatusColor = (status: string) => {
     switch (status) {

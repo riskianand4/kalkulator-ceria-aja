@@ -148,7 +148,7 @@ export const AssetTable: React.FC<AssetTableProps> = ({
     );
   };
 
-  const canEdit = user?.role === 'admin' || user?.role === 'superadmin';
+  const canEdit = user?.role === 'superadmin';
   const canAssignPIC = user?.role === 'superadmin';
 
   const uniqueCategories = [...new Set(assets.map(asset => asset.category))];

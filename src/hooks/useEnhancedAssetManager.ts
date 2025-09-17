@@ -77,7 +77,7 @@ export const useEnhancedAssetManager = () => {
 
   // Add asset with enhanced error handling
   const addAsset = useCallback(async (assetData: Omit<Asset, 'id' | 'createdAt' | 'updatedAt'>) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('You do not have permission to add assets');
       return;
     }
@@ -182,7 +182,7 @@ export const useEnhancedAssetManager = () => {
 
   // Update asset with enhanced error handling
   const updateAsset = useCallback(async (id: string, updates: Partial<Asset>) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('You do not have permission to update assets');
       return;
     }
@@ -264,7 +264,7 @@ export const useEnhancedAssetManager = () => {
 
   // Delete asset with enhanced error handling
   const deleteAsset = useCallback(async (id: string) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('You do not have permission to delete assets');
       return;
     }
@@ -317,7 +317,7 @@ export const useEnhancedAssetManager = () => {
 
   // Borrow asset
   const borrowAsset = useCallback(async (borrowRequest: AssetBorrowRequest) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('You do not have permission to borrow assets');
       return;
     }
@@ -359,7 +359,7 @@ export const useEnhancedAssetManager = () => {
 
   // Return asset
   const returnAsset = useCallback(async (assetId: string, notes?: string) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('You do not have permission to return assets');
       return;
     }

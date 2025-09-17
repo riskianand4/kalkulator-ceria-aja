@@ -27,7 +27,7 @@ export const useAssetManager = () => {
 
   // Add new asset (Admin+ only)
   const addAsset = useCallback(async (asset: Omit<Asset, 'id' | 'createdAt' | 'updatedAt'>) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }
@@ -60,7 +60,7 @@ export const useAssetManager = () => {
 
   // Update asset (Admin+ only)
   const updateAsset = useCallback(async (assetId: string, updates: Partial<Asset>) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }
@@ -116,7 +116,7 @@ export const useAssetManager = () => {
 
   // Borrow asset (Admin+ only)
   const borrowAsset = useCallback(async (borrowRequest: AssetBorrowRequest) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }
@@ -174,7 +174,7 @@ export const useAssetManager = () => {
 
   // Return asset (Admin+ only)
   const returnAsset = useCallback(async (assetId: string, notes?: string) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }
@@ -219,7 +219,7 @@ export const useAssetManager = () => {
 
   // Add maintenance record (Admin+ only)
   const addMaintenanceRecord = useCallback(async (assetId: string, maintenance: Omit<MaintenanceRecord, 'id' | 'assetId'>) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }
@@ -259,7 +259,7 @@ export const useAssetManager = () => {
 
   // Delete asset (Admin+ only)
   const deleteAsset = useCallback(async (assetId: string) => {
-    if (!user || (user.role !== 'admin' && user.role !== 'superadmin')) {
+    if (!user || user.role !== 'superadmin') {
       toast.error('Akses ditolak');
       return;
     }

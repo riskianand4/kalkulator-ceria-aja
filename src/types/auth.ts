@@ -2,7 +2,7 @@ export interface User {
   id: string;
   username: string;
   email: string;
-  role: 'user' | 'admin' | 'superadmin';
+  role: 'user' | 'superadmin';
   name: string;
   avatar?: string;
 }
@@ -24,13 +24,6 @@ export const DUMMY_USERS: User[] = [
   },
   {
     id: '2',
-    username: 'admin',
-    email: 'admin@telnet.co.id',
-    role: 'admin',
-    name: 'Admin Telnet',
-  },
-  {
-    id: '3',
     username: 'superadmin',
     email: 'superadmin@telnet.co.id',
     role: 'superadmin',
@@ -40,6 +33,5 @@ export const DUMMY_USERS: User[] = [
 
 export const DUMMY_CREDENTIALS = [
   { username: 'user', password: 'user123' },
-  { username: 'admin', password: 'admin123' },
   { username: 'superadmin', password: 'super123' },
 ];

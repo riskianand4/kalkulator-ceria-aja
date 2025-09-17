@@ -49,7 +49,7 @@ const ProductTable = ({
   onDelete,
 }: ProductTableProps) => {
   const { user } = useApp();
-  const isAdmin = user?.role === "admin" || user?.role === "superadmin";
+  const isAdmin = user?.role === "superadmin";
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<Product | null>(null);
   const [detailDialogOpen, setDetailDialogOpen] = useState(false);

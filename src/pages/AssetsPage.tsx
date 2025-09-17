@@ -77,7 +77,7 @@ const AssetsPage = () => {
     return <ModernLoginPage />;
   }
 
-  const canEdit = user.role === 'admin' || user.role === 'superadmin';
+  const canEdit = user.role === 'superadmin';
 
   const handleBorrowAsset = (asset: Asset) => {
     setSelectedAsset(asset);

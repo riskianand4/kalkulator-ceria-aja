@@ -3,8 +3,8 @@ const AdminActivity = require('../models/AdminActivity');
 const logAdminActivity = (action, options = {}) => {
   return async (req, res, next) => {
     try {
-      // Only log if user is authenticated and is admin/superadmin
-      if (req.user && (req.user.role === 'admin' || req.user.role === 'superadmin')) {
+      // Only log if user is authenticated and is super_admin
+      if (req.user && req.user.role === 'super_admin') {
         const activity = {
           adminId: req.user.id,
           admin: req.user.name || req.user.email,

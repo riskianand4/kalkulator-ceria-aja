@@ -274,7 +274,7 @@ const ModernProductGrid = () => {
               </div>
 
               {/* Add Product */}
-              {(user?.role === 'admin' || user?.role === 'superadmin') && (
+              {user?.role === 'superadmin' && (
                 <Button className="bg-primary hover:shadow-glow text-xs sm:text-sm h-8 sm:h-9 px-2 sm:px-3">
                   <Plus className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   <span className="hidden sm:inline">Tambah</span>

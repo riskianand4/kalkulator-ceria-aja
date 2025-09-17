@@ -78,7 +78,7 @@ const ProductGrid = () => {
           </p>
         </div>
         
-        {(user?.role === 'admin' || user?.role === 'superadmin') && (
+        {user?.role === 'superadmin' && (
           <Button className="bg-primary hover:bg-primary-hover">
             <Plus className="w-4 h-4 mr-2" />
             Tambah Produk

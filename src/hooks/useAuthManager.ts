@@ -129,9 +129,9 @@ export const useAuthManager = () => {
 
       if (response.success && response.token && response.user) {
         // Standardize role format - backend uses 'super_admin', frontend uses 'superadmin'
-        const normalizeRole = (role: string): 'user' | 'admin' | 'superadmin' => {
+        const normalizeRole = (role: string): 'user' | 'superadmin' => {
           if (role === 'super_admin') return 'superadmin';
-          if (['user', 'admin', 'superadmin'].includes(role)) return role as 'user' | 'admin' | 'superadmin';
+          if (['user', 'superadmin'].includes(role)) return role as 'user' | 'superadmin';
           return 'user'; // default fallback
         };
 

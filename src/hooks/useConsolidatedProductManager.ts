@@ -189,7 +189,7 @@ export const useConsolidatedProductManager = () => {
       return false;
     }
 
-    if (user?.role !== 'superadmin' && user?.role !== 'admin') {
+    if (user?.role !== 'superadmin') {
       toast.error('You do not have permission to delete products');
       return false;
     }

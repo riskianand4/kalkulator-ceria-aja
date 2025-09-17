@@ -20,7 +20,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Package },
     { id: 'stats', label: 'Statistik', icon: BarChart3 },
-    ...(user?.role === 'admin' || user?.role === 'superadmin' 
+    ...(user?.role === 'superadmin' 
       ? [{ id: 'settings', label: 'Pengaturan', icon: Settings }] 
       : []
     ),

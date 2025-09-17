@@ -203,7 +203,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
       return false;
     }
 
-    if (user?.role !== 'superadmin' && user?.role !== 'admin') {
+    if (user?.role !== 'superadmin') {
       toast.error('You do not have permission to delete products');
       return false;
     }

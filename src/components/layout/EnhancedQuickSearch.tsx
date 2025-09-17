@@ -93,7 +93,7 @@ export const EnhancedQuickSearch: React.FC<EnhancedQuickSearchProps> = ({ isOpen
       },
     ];
 
-    if (user?.role === 'admin' || user?.role === 'superadmin') {
+    if (user?.role === 'superadmin') {
       baseItems.push(
         { 
           title: 'Stock Management', 

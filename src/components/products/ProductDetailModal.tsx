@@ -64,7 +64,7 @@ const ProductDetailModal = ({
   const {
     user
   } = useApp();
-  const isAdmin = user?.role === 'admin' || user?.role === 'superadmin';
+  const isAdmin = user?.role === 'superadmin';
   const { toast } = useToast();
   const [imagePreview, setImagePreview] = useState<string>('');
   const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);

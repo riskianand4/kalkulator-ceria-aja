@@ -30,7 +30,7 @@ export const QuickSearch: React.FC<QuickSearchProps> = ({ isOpen, onClose }) => 
       { title: 'Alerts', description: 'Check system notifications', href: '/alerts', category: 'Navigation' },
     ];
 
-    if (user?.role === 'admin' || user?.role === 'superadmin') {
+    if (user?.role === 'superadmin') {
       baseItems.push(
         { title: 'Stock Management', description: 'Manage inventory and stock levels', href: '/stock-movement', category: 'Admin' },
         { title: 'User Management', description: 'Manage system users', href: '/users', category: 'Admin' },

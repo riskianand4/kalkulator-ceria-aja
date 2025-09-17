@@ -847,8 +847,7 @@ export default function AlertsPage() {
                                       <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                                     </Button>
                                   )}
-                                  {(user?.role === "admin" ||
-                                    user?.role === "superadmin") &&
+                                   {user?.role === "superadmin" &&
                                     !alert.isResolved && (
                                       <Button
                                         variant="ghost"

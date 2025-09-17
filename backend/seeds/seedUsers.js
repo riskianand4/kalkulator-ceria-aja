@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 require('dotenv').config();
 
-// Demo users matching the frontend
+// Demo users matching the frontend - admin role removed
 const demoUsers = [
   {
     name: 'Staff Demo',

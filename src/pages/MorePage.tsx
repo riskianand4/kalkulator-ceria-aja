@@ -186,8 +186,7 @@ const MorePage = () => {
                   <div className="mobile-text-small font-medium truncate">{user.name}</div>
                   <div className="mobile-text-tiny text-muted-foreground truncate">{user.email}</div>
                   <Badge variant="secondary" className="mobile-text-tiny mt-1">
-                    {user.role === 'superadmin' ? 'Super Admin' : 
-                     user.role === 'admin' ? 'Admin' : 'User'}
+                     {user?.role === 'superadmin' ? 'Super Admin' : 'User'}
                   </Badge>
                 </div>
               </div>

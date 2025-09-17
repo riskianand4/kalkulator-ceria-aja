@@ -452,7 +452,7 @@ const StockMovementHistory = () => {
                         >
                           <Eye className="w-4 h-4" />
                         </Button>
-                        {(user?.role === 'admin' || user?.role === 'superadmin') && (
+                        {user?.role === 'superadmin' && (
                           <>
                             <Button 
                               variant="ghost" 

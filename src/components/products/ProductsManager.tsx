@@ -35,7 +35,7 @@ export type SortOption = "name" | "price" | "stock" | "category" | "updated";
 const ProductsManager = () => {
   const logger = useMemo(() => createComponentLogger("ProductsManager"), []);
   const { user } = useApp();
-  const isAdmin = user?.role === "admin" || user?.role === "superadmin";
+  const isAdmin = user?.role === "superadmin";
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<string>("all");

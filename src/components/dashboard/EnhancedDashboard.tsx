@@ -142,8 +142,7 @@ const EnhancedDashboard = () => {
           </p>
           <div className="flex items-center gap-2 mt-2">
             <Badge className={getRoleColor(user?.role || 'user')}>
-              {user?.role === 'superadmin' ? 'Super Admin' : 
-               user?.role === 'admin' ? 'Admin' : 'User'}
+               {user?.role === 'superadmin' ? 'Super Admin' : 'User'}
             </Badge>
             <Badge variant="outline" className="text-xs">
               {new Date().toLocaleDateString('id-ID', { 
