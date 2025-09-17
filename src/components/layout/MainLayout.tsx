@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { LogOut, Bell, Search, User, BookOpen, Wifi } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { QuickSearch } from './QuickSearch';
+import { WelcomeSection } from './WelcomeSection';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import NotificationCenter from './NotificationCenter';
 import SyncStatusIndicator from './SyncStatusIndicator';
@@ -112,6 +113,9 @@ const MainLayout = memo(function MainLayout({
 
         {/* Mobile Main Content */}
         <main className="flex-1 mobile-padding-compact overflow-auto">
+          {/* Welcome Section for Mobile */}
+          <WelcomeSection className="mb-4" />
+          
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -191,6 +195,9 @@ const MainLayout = memo(function MainLayout({
           </motion.header>
 
           <main className="flex-1 mobile-responsive-padding overflow-hidden">
+            {/* Welcome Section for Desktop */}
+            <WelcomeSection className="mb-6 mx-4 lg:mx-6 mt-4 lg:mt-6" />
+            
             <motion.div initial={{
             opacity: 0,
             y: 20
