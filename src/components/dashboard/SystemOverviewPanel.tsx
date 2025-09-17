@@ -225,10 +225,12 @@ const SystemOverviewPanel: React.FC<SystemOverviewPanelProps> = ({
               </div>
             )}
           </div>
-          <Button variant="outline" className="w-full mt-3" size="sm">
-            <Activity className="h-4 w-4 mr-2" />
-            View Full Admin Log
-          </Button>
+          <Link to="/audit-log">
+            <Button variant="outline" className="w-full mt-3" size="sm">
+              <Activity className="h-4 w-4 mr-2" />
+              View Full Admin Log
+            </Button>
+          </Link>
         </CardContent>
       </Card>
 
