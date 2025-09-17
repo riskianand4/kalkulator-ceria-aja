@@ -482,7 +482,7 @@ export const ImportProductDialog: React.FC<ImportProductDialogProps> = ({
               <ScrollArea className="flex-1 border rounded-lg">
                 <div className="p-3 md:p-4 space-y-2">
                   {parsedData.map((product, index) => (
-                    <div key={index} className={`border rounded-lg p-2.5 md:p-3 ${product.validation.valid ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}`}>
+                    <div key={index} className={`border rounded-lg p-2.5 md:p-3 ${product.validation.valid ? 'border-green-600' : 'border-red-600'}`}>
                       <div className="flex items-start justify-between">
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-2">
